@@ -1,2 +1,2 @@
 # GMS
-Back-end Part
+Back-end Part of Gym Management System
