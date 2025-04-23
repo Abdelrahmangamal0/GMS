@@ -1,0 +1,197 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c2e80;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+}
+
+.logo {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#feedback {
+  border: None;
+  font-weight: 700;
+  color: #575794;
+  font-size: 28px;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #0B1A57;
+  color: white;
+  padding: 1.5rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.nav-link {
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  background-color: #ffffff !important;
+  color: #0B1A57 !important;
+  font-weight: 600;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #ece9e9;
+}
+
+.header {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+  border: None;
+}
+
+.members-card {
+  background-color: #65658b;
+  color: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin: auto;
+}
+
+.search-input {
+  background-color: #575794;
+  border: none;
+  color: #ccc;
+  width: 180px;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.search-input::placeholder {
+  color: #ddd;
+}
+
+#button {
+  background-color: #65658b;
+  color: white;
+  border-radius: 50%;
+  padding: 6px 10px;
+}
+
+#select {
+  background-color: #575794;
+  color: white;
+  border: none;
+  width: 180px;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+.edit-btn {
+  background-color: white;
+  color: #575794;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 15px;
+}
+
+.pagination-btn {
+  background-color: #aaa;
+  color: #333;
+  border-radius: 15px;
+  padding: 6px 14px;
+  font-size: 14px;
+}
+
+.table-bg thead th {
+  color: #bcbbbb;
+  background-color: #65658b !important;
+  font-size: 14px;
+}
+
+.table-bg tbody td {
+  background-color: #65658b !important;
+  color: white;
+  font-size: 14px;
+}
+
+.admin-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.admin-name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.bi {
+  color: #fffad9;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 999;
+    border-radius: 0;
+  }
+
+  .layout {
+    flex-direction: column;
+    padding-bottom: 90px;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+  }
+
+  .admin-info {
+    display: none;
+  }
+}

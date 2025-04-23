@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Active Members</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    
+    <div id="sidebar-container" class="sidebar" >
+      <script>
+  fetch('sidebar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('sidebar-container').innerHTML = data;
+    })
+    .catch(err => console.error('Error loading sidebar:', err));
+</script>
+
+    </div>
+ 
+    <!-- Main Content -->
+    <div class="main-content">
+      <h5 class="fw-bold mb-3">Active Members</h5>
+
+      <!-- Members Table  -->
+      <div class="members-card">
+        <h4 class="fw-bold mb-3">Gym Members</h4>
+
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+          <div class="d-flex align-items-center mb-2">
+            <label class="me-2">Show Entities</label>
+            <select id="select" class="form-select form-select-sm w-auto">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+            </select>
+          </div>
+
+          <div class="d-flex mb-2">
+            <input type="text" class="form-control search-input me-2" placeholder="Search" />
+            <button id="button" class="btn btn-sm">ّ<i class="bi bi-search fs-4"></i></button>
+          </div>
+        </div>
+
+        <table class="table table-bg">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Enroll</th>
+              <th>Expire</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Member 1</td>
+              <td>SFM2301N1</td>
+              <td>Jan 11</td>
+              <td>Feb 11</td>
+              <td><button class="btn btn-sm edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+              <td>Member 2</td>
+              <td>SFM2301N2</td>
+              <td>Jan 11</td>
+              <td>Feb 11</td>
+              <td><button class="btn btn-sm edit-btn">Edit</button></td>
+            </tr>
+            <tr>
+              <td>Member 3</td>
+              <td>SFM2301N3</td>
+              <td>Jan 11</td>
+              <td>Feb 11</td>
+              <td><button class="btn btn-sm edit-btn">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end">
+          <button class="btn pagination-btn me-2">Previous</button>
+          <button class="btn pagination-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
