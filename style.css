@@ -38,12 +38,27 @@ h5 {
 }
 
 .sidebar {
+  margin: 13px 5px 0px 10px;
   width: 260px;
   background-color: #0B1A57;
   color: white;
   padding: 1.5rem;
-  border-top-right-radius: 20px;
+  border-radius: 20px;
   border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 96dvh;
+}
+
+.admin-info {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.admin-name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 .nav-link {
@@ -60,10 +75,14 @@ h5 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.nav-link.active {
+.nav-link.members-active {
   background-color: #ffffff !important;
   color: #0B1A57 !important;
   font-weight: 600;
+}
+
+.nav-link.active .bi {
+  color: #0B1A57 !important;
 }
 
 .main-content {
